@@ -21,8 +21,7 @@ namespace API.Controllers
         [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
         {
-            return await context.Users.ToListAsync();
-            
+            return await context.Users.ToListAsync();      
         }
         [Authorize]
         [HttpGet("{id}")]
